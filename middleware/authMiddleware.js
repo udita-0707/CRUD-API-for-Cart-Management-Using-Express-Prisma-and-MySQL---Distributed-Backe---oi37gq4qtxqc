@@ -1,4 +1,4 @@
-const { API_KEY } = require('./authkey');
+const { API_KEY } = require('../authkey');
 
 const authMiddleware = (req, res, next) => {
   const apiauthkey = req.headers['apiauthkey'];

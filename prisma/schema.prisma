@@ -1,0 +1,15 @@
+datasource db {
+  provider = "mysql" // Database type
+  url      = env("DATABASE_URL") // Environment variable for the connection string
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Cart {
+  cartId    Int    @id @default(autoincrement())
+  userId    Int
+  productId Int
+  count     Int
+}
